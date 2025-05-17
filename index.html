@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Expletus+Sans:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Sidebar -->
+      <nav class="sidebar">
+        <div class="sidebar-content">
+          <div>
+            <img src="images/Group 16.png" class="logo-img" />
+          </div>
+          <h4>ALL BOARDS(1)</h4>
+          <button class="board-button">Launch Career</button>
+        </div>
+      </nav>
+
+      <!-- Main Layout -->
+      <div class="main">
+        <!-- Header -->
+        <header class="header">
+          <div class="header-content">
+            <h2>Launch Career</h2>
+          </div>
+        </header>
+
+        <!-- Board Columns -->
+        <div class="board-container">
+          <section class="columns-section">
+            <!-- TODO Column -->
+            <div class="column">
+              <div class="column-header">
+                <span class="todo-dot"></span>
+                <h4>TO DO (4)</h4>
+              </div>
+              <div class="tasks">
+                <span class="task">Launch Epic Career 🚀</span>
+                <span class="task">Conquer React ⚛️</span>
+                <span class="task">Understand Databases ⚙️</span>
+                <span class="task">Crush Frameworks 🖼️</span>
+              </div>
+            </div>
+
+            <!-- DOING Column -->
+            <div class="column">
+              <div class="column-header">
+                <span class="doing-dot"></span>
+                <h4>DOING (2)</h4>
+              </div>
+              <div class="tasks">
+                <span class="task">Master JavaScript 💛</span>
+                <span class="task">Never Give Up 🏆</span>
+              </div>
+            </div>
+
+            <!-- DONE Column -->
+            <div class="column">
+              <div class="column-header">
+                <span class="done-dot"></span>
+                <h4>DONE (2)</h4>
+              </div>
+              <div class="tasks">
+                <span class="task">Explore ES6 Features 🚀</span>
+                <span class="task">Have fun 🥳 🛠️</span>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
