@@ -13,7 +13,6 @@ This Kanban Task manager project was modified into an interactive website using 
 
 ## Technical Implementation
 
-The project is implemented entirely with vanilla JavaScript DOM manipulation:
 
 1. **Modal System**: Dynamically creates a modal overlay for task editing
 2. **Event Handling**: Sets up listeners for task clicks and modal interactions
