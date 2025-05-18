@@ -41,7 +41,7 @@ const initialTasks = [
     },
   ];
 
-
+// Creating the Modal using CSS Stlying
   const modal = document.createElement("div");
   Object.assign(modal.style, {
     position: "fixed",
@@ -58,7 +58,7 @@ const initialTasks = [
   });
   document.body.appendChild(modal);
   
-  // ========= MODAL CREATION =========
+  // The functionality of the modal,
   function createModal(taskElement) {
     const titleText = taskElement.textContent.trim();
     const originalColumn = taskElement.closest(".column");
@@ -74,7 +74,7 @@ const initialTasks = [
     });
   
     const closeBtn = document.createElement("span");
-    closeBtn.innerHTML = "&times;";
+    closeBtn.innerHTML = "&times;"; //the symbol for the x
     Object.assign(closeBtn.style, {
       position: "absolute",
       top: "10px",
@@ -84,11 +84,12 @@ const initialTasks = [
       cursor: "pointer",
       color: "#888"
     });
+      // the creation and the function of that will occur when the x button will be clicked  
     closeBtn.onclick = () => {
       modal.style.display = "none";
       console.log("❌ Modal closed by close button.");
     };
-  
+     // The input for the modal  , Title 
     const heading = document.createElement("h3");
     heading.textContent = "Task";
     heading.style.marginBottom = "20px";
@@ -100,14 +101,15 @@ const initialTasks = [
       type: "text",
       value: titleText
     });
+      
     Object.assign(titleInput.style, inputStyle());
-  
+       // The input for the modal  , Description
     const descLabel = document.createElement("label");
     descLabel.textContent = "Description";
     const descInput = document.createElement("textarea");
     descInput.value = taskElement.dataset.description || "";
     Object.assign(descInput.style, textareaStyle());
-  
+       // The input for the modal  , Status
     const statusLabel = document.createElement("label");
     statusLabel.textContent = "Status";
     const statusSelect = document.createElement("select");
@@ -145,19 +147,18 @@ const initialTasks = [
       taskList.appendChild(taskElement);
       modal.style.display = "none";
   
-      // ✅ Log changes
-      console.log("✅ Task updated:");
+      // 
+      console.log("Task updated:");
       console.log("Title:", titleInput.value);
       console.log("Description:", descInput.value);
       console.log("New Status:", newStatus);
     };
-  
+   //to delete the changes
     deleteBtn.onclick = () => {
       taskElement.remove();
       modal.style.display = "none";
-  
-      // 🗑️ Log deletion
-      console.log("🗑️ Task deleted:", titleText);
+        
+      console.log(" Task deleted:", titleText);
     };
   
     btnContainer.appendChild(saveBtn);
